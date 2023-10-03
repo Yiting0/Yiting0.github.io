@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的網頁</title>
+    <!-- 添加Bootstrap链接 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- 添加自定义CSS样式，包括背景图像 -->
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/27/f7/f5/27f7f5a893b5aa121f37bfe1064c960f.jpg'); /* 替换为实际的背景图像URL */
+            background-size: cover; /* 背景图像将会缩放以覆盖整个屏幕 */
+            background-repeat: no-repeat; /* 禁止背景图像重复 */
+            
+        }
+        .navbar {
+            background-color: transparent; /* 使导航栏背景透明 */
+        }
+    
+        /* 用于定位时钟的样式 */
+        .clock-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- 左上角的网页名字 -->
+            <a class="navbar-brand" href="#">我的網頁</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- 右上角的链接：產業 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">個人資料</a>
+                    </li>
+                    <!-- 右上角的链接：AI -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">我的作品</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                 <img src="https://n.sinaimg.cn/translate/200/w1080h720/20181123/bMHP-hpevhck2049577.jpg" alt="展示图片" width="600" height="450">
+    <script src="script.js"></script>
+            </div>
+        </div>
+    </div>
+    <!-- 添加您的网页内容 -->
+    
+    <!-- 添加Bootstrap的JavaScript链接（jQuery和Popper.js）以及Bootstrap本身的JavaScript链接 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+        <!-- 这里是您的网页内容 -->
+        <h1>     hello!</h1>
+        
+        
+        <div class="bubble"></div>
+        <script src="script.js"></script>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/I3ZozsgDDqI?si=hjKqdBE5grNtcrg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <!-- 用于显示时钟的容器 -->
+    <div class="clock-container">
+        <div id="clock"></div>
+    </div>
+
+    <script>
+        // 更新时钟的函数
+        function updateClock() {
+            const clockElement = document.getElementById("clock");
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, "0");
+            const minutes = now.getMinutes().toString().padStart(2, "0");
+            const seconds = now.getSeconds().toString().padStart(2, "0");
+            clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // 每秒更新一次时钟
+        setInterval(updateClock, 1000);
+
+        // 初始更新
+        updateClock();
+    </script>
+</body>
+</html>
